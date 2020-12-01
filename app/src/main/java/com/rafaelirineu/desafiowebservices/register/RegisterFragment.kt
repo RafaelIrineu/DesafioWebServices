@@ -27,7 +27,7 @@ class RegisterFragment : Fragment() {
 
         view.findViewById<Button>(R.id.btnSave_fragmentRegister).setOnClickListener {
             if (validaCamposRegister(view)) {
-                //navController.navigate(R.id.action_loginFragment_to_registerFragment)
+                navController.navigate(R.id.action_registerFragment_to_homeFragment)
             }
         }
     }

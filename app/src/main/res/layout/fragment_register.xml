@@ -41,7 +41,7 @@
                     android:layout_marginStart="30dp"
                     android:text="@string/register"
                     android:textColor="@color/colorWhite"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/imgBack"
@@ -61,7 +61,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="110dp"
         android:background="@drawable/shape_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,9 +83,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_fragmentLogin"
-            android:layout_width="361dp"
-            android:layout_height="361dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="311dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
             android:background="@color/colorWhite"
             app:cardCornerRadius="25dp"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout_fragmentLogin"
@@ -94,8 +94,8 @@
             app:layout_constraintTop_toBottomOf="@id/txtFake_fragmentRegister">
 
             <LinearLayout
-                android:layout_width="361dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
@@ -103,7 +103,8 @@
                     android:id="@+id/txtName_fragmentRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@color/colorWhite"
                     android:hint="@string/name"
                     app:hintTextColor="@color/colorHint">
@@ -120,7 +121,8 @@
                     android:id="@+id/txtEmail_fragmentRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@color/colorWhite"
                     android:hint="@string/email"
                     app:hintTextColor="@color/colorHint">
@@ -137,7 +139,8 @@
                     android:id="@+id/txtPassword_fragmentRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@color/colorWhite"
                     android:hint="@string/password"
                     app:hintTextColor="@color/colorHint">

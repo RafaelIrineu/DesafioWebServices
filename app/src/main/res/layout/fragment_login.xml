@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/shape_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:gravity="center"
         android:text="@string/welcome_to_the_marvel_hq_s"
         android:textColor="@color/colorWhite"
-        android:textSize="25sp"
+        android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout_fragmentLogin"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout_fragmentLogin"
@@ -39,9 +39,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_fragmentLogin"
-        android:layout_width="361dp"
-        android:layout_height="361dp"
+        android:layout_width="311dp"
+        android:layout_height="359dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
         android:background="@color/colorWhite"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout_fragmentLogin"
@@ -50,16 +52,17 @@
         app:layout_constraintTop_toBottomOf="@id/txtWelcome_fragmentLogin">
 
         <LinearLayout
-            android:layout_width="361dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtEmail_fragmentLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="05dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="05dp"
                 android:background="@color/colorWhite"
                 android:hint="@string/email"
                 app:hintTextColor="@color/colorHint">
@@ -76,7 +79,8 @@
                 android:id="@+id/txtPassword_fragmentLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
                 android:background="@color/colorWhite"
                 android:hint="@string/password"
                 app:hintTextColor="@color/colorHint">
@@ -92,9 +96,9 @@
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
+                android:layout_marginBottom="10dp"
                 android:checked="true"
                 android:text="@string/remember"
                 android:textColor="@color/colorRedText" />
@@ -103,8 +107,8 @@
                 android:id="@+id/btnLogin_fragmentLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="05dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/colorBackgroundSecondary"
                 android:fontFamily="sans-serif"
@@ -117,9 +121,9 @@
                 android:id="@+id/btnCreate_fragmentLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="05dp"
+                android:layout_marginRight="05dp"
                 android:background="@color/colorWhite"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/create_account"

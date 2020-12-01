@@ -53,7 +53,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout_fragmentRegister"
         android:layout_width="match_parent"
@@ -128,7 +127,7 @@
                     app:hintTextColor="@color/colorHint">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtInpuEmail_fragmentRegister"
+                        android:id="@+id/txtInputEmail_fragmentRegister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress" />
@@ -146,7 +145,7 @@
                     app:hintTextColor="@color/colorHint">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtInpuPassword_fragmentRegister"
+                        android:id="@+id/txtInputPassword_fragmentRegister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword" />

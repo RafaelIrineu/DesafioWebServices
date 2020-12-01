@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.rafaelirineu.desafiowebservices.R
 
 class LoginFragment : Fragment() {
@@ -24,7 +26,31 @@ class LoginFragment : Fragment() {
         val navController = Navigation.findNavController(view)
 
         view.findViewById<Button>(R.id.btnCreate_fragmentLogin).setOnClickListener {
-            navController.navigate(R.id.action_loginFragment_to_registerFragment)
+            if (validaCamposLogin(view)) {
+                navController.navigate(R.id.action_loginFragment_to_registerFragment)
+            }
         }
+    }
+
+    private fun validaCamposLogin(view: View): Boolean {
+
+        var emailLogin =
+            view.findViewById<TextInputEditText>(R.id.txtInputEmail_fragmentLogin)
+        var passwordLogin =
+            view.findViewById<TextInputEditText>(R.id.txtInputPassword_fragmentLogin)
+
+        var resultado = true
+
+        if (emailLogin.text?.isBlank()!!) {
+            view.findViewById<TextInputLayout>(R.id.txtEmail_fragmentLogin).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        if (passwordLogin.text?.isBlank()!!) {
+            view.findViewById<TextInputLayout>(R.id.txtPassword_fragmentLogin).editText?.error =
+                getString(R.string.campo_vazio)
+            resultado = false
+        }
+        return resultado
     }
 }

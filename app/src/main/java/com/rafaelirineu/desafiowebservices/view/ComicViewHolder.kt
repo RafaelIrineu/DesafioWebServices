@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.viewmodel.adapter
+package com.rafaelirineu.desafiowebservices.view
 
 import android.annotation.SuppressLint
 import android.view.View
@@ -9,10 +9,10 @@ import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 import com.squareup.picasso.Picasso
 
-class ComicViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ComicViewHolder(private val _itemView: View) : RecyclerView.ViewHolder(_itemView) {
 
-    private var _ivImageComic = itemView.findViewById<ImageView>(R.id.img_layoutItemComic)
-    private var _tvIssueNumber = itemView.findViewById<TextView>(R.id.txt_layoutItemComic)
+    private var _ivImageComic = _itemView.findViewById<ImageView>(R.id.img_layoutItemComic)
+    private var _tvIssueNumber = _itemView.findViewById<TextView>(R.id.txt_layoutItemComic)
 
     @SuppressLint("SetTextI18n")
     fun bind(comic: ComicModel) {

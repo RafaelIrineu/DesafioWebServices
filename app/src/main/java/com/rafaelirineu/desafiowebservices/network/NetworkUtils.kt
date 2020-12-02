@@ -9,8 +9,8 @@ const val PRIVATE_KEY = "27c1e431978243f0151690d53f0e430f38fb7beb"
 class NetworkUtils {
 
     companion object {
-        fun getRetrofitInstance (baseUrl: String = BASE_URL): Retrofit = Retrofit.Builder()
-            .baseUrl(baseUrl)
+        fun getRetrofitInstance (): Retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

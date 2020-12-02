@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.viewmodel.adapter
+package com.rafaelirineu.desafiowebservices.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 
-class ComicAdapter(private val dataSet: List<ComicModel>,private var listener :
+class ComicAdapter(private val dataSet: MutableList<ComicModel>, private var listener :
     (ComicModel) -> Unit): RecyclerView.Adapter<ComicViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicViewHolder {
@@ -15,12 +15,10 @@ class ComicAdapter(private val dataSet: List<ComicModel>,private var listener :
     }
 
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
-        holder.bind(dataSet[position])
-        holder.itemView.setOnClickListener {
-            listener(dataSet[position])
-        }
+        val item = dataSet[position]
+        holder.bind(item)
+        holder.itemView.setOnClickListener { listener(item) }
     }
 
     override fun getItemCount() = dataSet.size
-
 }

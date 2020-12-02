@@ -28,7 +28,16 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.rafaelirineu.desafiowebservices.view.main.HomeFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_comicInfoFragment"
+            app:destination="@id/comicInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comicInfoFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.ComicInfoFragment"
+        android:label="fragment_comic_info"
+        tools:layout="@layout/fragment_comic_info" />
 </navigation>

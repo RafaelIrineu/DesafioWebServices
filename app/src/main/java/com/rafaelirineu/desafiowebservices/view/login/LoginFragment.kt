@@ -26,8 +26,8 @@ class LoginFragment : Fragment() {
         val navController = Navigation.findNavController(view)
 
         view.findViewById<Button>(R.id.btnCreate_fragmentLogin).setOnClickListener {
-                navController.navigate(R.id.action_loginFragment_to_registerFragment)
-            }
+            navController.navigate(R.id.action_loginFragment_to_registerFragment)
+        }
 
         view.findViewById<Button>(R.id.btnLogin_fragmentLogin).setOnClickListener {
             if (validaCamposLogin(view)) {

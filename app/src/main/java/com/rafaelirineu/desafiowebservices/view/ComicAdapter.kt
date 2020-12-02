@@ -6,11 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 
-class ComicAdapter(private val dataSet: MutableList<ComicModel>, private var listener :
-    (ComicModel) -> Unit): RecyclerView.Adapter<ComicViewHolder>() {
+class ComicAdapter(
+    private val dataSet: MutableList<ComicModel>, private var listener:
+        (ComicModel) -> Unit) : RecyclerView.Adapter<ComicViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_comic_list_item, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.fragment_comic_list_item, parent, false)
         return ComicViewHolder(view)
     }
 

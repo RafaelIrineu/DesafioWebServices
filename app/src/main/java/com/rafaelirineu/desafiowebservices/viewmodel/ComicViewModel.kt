@@ -24,14 +24,14 @@ class ComicViewModel(private val repository: ComicRepository) : ViewModel() {
         }
     }
 
-    fun getUniqueComic(id:Int) = liveData(Dispatchers.IO) {
+    fun getUniqueComic(id: Int) = liveData(Dispatchers.IO) {
 
-        try{
+        try {
             val response = repository.getUniqueComic(id)
             uniqueComic = response.data.results[0]
             emit(uniqueComic)
 
-        }catch (e:Exception){
+        } catch (e: Exception) {
             println("Ocorreu um erro : ${e.message}")
         }
     }

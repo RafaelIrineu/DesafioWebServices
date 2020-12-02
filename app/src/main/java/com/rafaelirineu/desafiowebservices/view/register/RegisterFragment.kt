@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.navigation.Navigation
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -24,6 +25,10 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val navController = Navigation.findNavController(view)
+
+        view.findViewById<ImageView>(R.id.imgBack).setOnClickListener {
+            navController.navigate(R.id.action_registerFragment_to_loginFragment)
+        }
 
         view.findViewById<Button>(R.id.btnSave_fragmentRegister).setOnClickListener {
             if (validaCamposRegister(view)) {

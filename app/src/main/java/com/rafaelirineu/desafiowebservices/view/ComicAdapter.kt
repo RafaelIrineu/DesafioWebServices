@@ -10,7 +10,7 @@ class ComicAdapter(private val dataSet: MutableList<ComicModel>, private var lis
     (ComicModel) -> Unit): RecyclerView.Adapter<ComicViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_comic, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_comic_list_item, parent, false)
         return ComicViewHolder(view)
     }
 

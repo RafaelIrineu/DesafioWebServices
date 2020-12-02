@@ -33,12 +33,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        _view = view
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         val manager = GridLayoutManager(view.context, 3)
 
         _listaAdapter = ComicAdapter(_listaComic) {
 
-            val bundle = bundleOf("id" to it.id.toInt())
+            val bundle = bundleOf("id" to it.id)
             val navControl = Navigation.findNavController(view)
             navControl.navigate(R.id.action_homeFragment_to_comicInfoFragment, bundle)
         }

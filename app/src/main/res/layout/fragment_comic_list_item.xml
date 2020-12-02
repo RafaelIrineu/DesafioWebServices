@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlComicListItemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/comicImage"
+            android:layout_width="90dp"
+            android:layout_height="130dp"
+            android:padding="3dp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_launcher_background" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtIssueNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_90"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+</LinearLayout>

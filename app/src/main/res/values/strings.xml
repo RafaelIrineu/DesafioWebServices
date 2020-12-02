@@ -13,4 +13,6 @@
     <string name="save">save</string>
     <string name="campo_vazio">Campo Vazio</string>
     <string name="text_layoutItemComic">#HQ</string>
+    <string name="imagem">imagem</string>
+    <string name="_90">#90</string>
 </resources>

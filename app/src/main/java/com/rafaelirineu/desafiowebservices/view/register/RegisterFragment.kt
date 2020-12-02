@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.register
+package com.rafaelirineu.desafiowebservices.view.register
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

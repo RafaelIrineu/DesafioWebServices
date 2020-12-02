@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundPrimary"
     android:orientation="vertical"
-    tools:context=".main.HomeFragment">
+    tools:context=".view.main.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar_fragmentHome"
@@ -38,9 +38,13 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_appBar_fragmentHome" />
 
 </LinearLayout>

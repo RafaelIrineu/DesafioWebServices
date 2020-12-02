@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.rafaelirineu.desafiowebservices.login.LoginFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.rafaelirineu.desafiowebservices.register.RegisterFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.rafaelirineu.desafiowebservices.main.HomeFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.main.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

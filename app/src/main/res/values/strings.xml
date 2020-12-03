@@ -15,4 +15,14 @@
     <string name="text_layoutItemComic">#HQ</string>
     <string name="imagem">imagem</string>
     <string name="_90">#90</string>
+    <string name="published_fragmentComicInfo">Published:</string>
+    <string name="data_fragmentComicInfo">April 30, 2014</string>
+    <string name="price_fragmentComicInfo">Price:</string>
+    <string name="money_fragmentComicInfo">$ 5,99</string>
+    <string name="pages_fragmentComicInfo">pages:</string>
+    <string name="numberPages_fragmentComicInfo">38</string>
+    <string name="thumbnail_fragmentComicInfo">Thumbnail</string>
+    <string name="image_background_fragmentComicInfo">Image Background</string>
+    <string name="imgBotao_fragmentComicInfo">Botão de voltar</string>
+    <string name="imgBotao_fragmentComicCover">Botão de fechar</string>
 </resources>

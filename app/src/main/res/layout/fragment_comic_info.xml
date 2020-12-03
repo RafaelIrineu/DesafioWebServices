@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,31 +8,179 @@
     android:orientation="vertical"
     tools:context=".view.ComicInfoFragment">
 
-    <FrameLayout
-        android:id="@+id/framelayout_fragmentComicInfo"
+    <View
+        android:id="@+id/view_fragmentComicInfo"
         android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBackground_fragmentComicInfo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:alpha="0.55"
+        android:background="@drawable/ic_splash_screen_background"
+        android:contentDescription="@string/image_background_fragmentComicInfo"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBack_fragmentComicInfo"
+        android:layout_width="30dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="@string/imgBotao_fragmentComicInfo"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/imgHQ_fragmentComicInfo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:padding="3dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBack_fragmentComicInfo">
 
         <ImageView
-            android:id="@+id/img_fragmentItemComic"
+            android:id="@+id/imgThumb_fragmentItemComic"
+            android:layout_width="140dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:contentDescription="@string/thumbnail_fragmentComicInfo"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_splash_screen_background" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTitle_fragmentComicInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgHQ_fragmentComicInfo"
+        tools:text="AMAZING SPIDER MAN (2014) #1 (MHAN VARIANT)" />
+
+    <ScrollView
+        android:id="@+id/scrollView_fragmentComicInfo"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle_fragmentComicInfo">
+
+        <TextView
+            android:id="@+id/txtDescricao"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp">
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            tools:text="Texto texto texto" />
 
-            <ImageView
-                android:id="@+id/imgThumb_fragmentItemComic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:contentDescription="Thumbnail" />
+    </ScrollView>
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/published_fragmentComicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/published_fragmentComicInfo"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView_fragmentComicInfo" />
 
-    </FrameLayout>
+    <TextView
+        android:id="@+id/txtPublished_fragmentComicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/data_fragmentComicInfo"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/published_fragmentComicInfo"
+        app:layout_constraintTop_toBottomOf="@id/scrollView_fragmentComicInfo" />
+
+    <TextView
+        android:id="@+id/price_fragmentComicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/price_fragmentComicInfo"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/published_fragmentComicInfo" />
+
+    <TextView
+        android:id="@+id/txtPrice_fragmentComicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/money_fragmentComicInfo"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/price_fragmentComicInfo"
+        app:layout_constraintTop_toBottomOf="@+id/txtPublished_fragmentComicInfo" />
+
+    <TextView
+        android:id="@+id/pages_fragmentComicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/pages_fragmentComicInfo"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_fragmentComicInfo" />
+
+    <TextView
+        android:id="@+id/txtPages_fragmentComicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/numberPages_fragmentComicInfo"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/pages_fragmentComicInfo"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice_fragmentComicInfo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

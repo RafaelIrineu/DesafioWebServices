@@ -8,7 +8,7 @@
     tools:context=".view.ComicCoverFragment">
 
     <ImageView
-        android:id="@+id/imgBack_fragmentComicInfo"
+        android:id="@+id/imgClose_fragmentComicCover"
         android:layout_width="30dp"
         android:layout_height="55dp"
         android:layout_marginStart="15dp"
@@ -28,7 +28,7 @@
         android:background="@color/colorWhite"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBack_fragmentComicInfo">
+        app:layout_constraintTop_toBottomOf="@+id/imgClose_fragmentComicCover">
 
         <ImageView
             android:id="@+id/imageViewFull"

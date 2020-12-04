@@ -25,4 +25,10 @@
     <string name="image_background_fragmentComicInfo">Image Background</string>
     <string name="imgBotao_fragmentComicInfo">Botão de voltar</string>
     <string name="imgBotao_fragmentComicCover">Botão de fechar</string>
+    <string name="imagem_da_capa_fragmentComicCover">Imagem da Capa</string>
+    <string name="imagem_da_capa_fragmentComicListItem">Imagem da capa</string>
+    <string name="imagem_botaoVoltar_fragmentRegister">Imagem Botão de Voltar</string>
+    <string name="imagem_do_usuario_fragmentRegister">Imagem do Usuario</string>
+    <string name="capa_do_quadrinho_fragmentItemComic">Capa do quadrinho</string>
+    <string name="main_activity">Main Activity</string>
 </resources>

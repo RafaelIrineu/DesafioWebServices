@@ -9,7 +9,7 @@ import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 import com.squareup.picasso.Picasso
 
-class ComicViewHolder(private val _itemView: View) : RecyclerView.ViewHolder(_itemView) {
+class ComicViewHolder(_itemView: View) : RecyclerView.ViewHolder(_itemView) {
 
     private var _ivImageComic = _itemView.findViewById<ImageView>(R.id.comicImage)
     private var _tvIssueNumber = _itemView.findViewById<TextView>(R.id.txtIssueNumber)
@@ -17,12 +17,11 @@ class ComicViewHolder(private val _itemView: View) : RecyclerView.ViewHolder(_it
     @SuppressLint("SetTextI18n")
     fun bind(comic: ComicModel) {
 
-        _tvIssueNumber.text = "# ${comic.id}"
-
-        val imagePath = comic.thumbnail?.getImagePath()
+        val image = "${comic.thumbnail.path}/portrait_uncanny.${comic.thumbnail.extension}"
 
         Picasso.get()
-            .load(imagePath)
+            .load(image)
             .into(_ivImageComic)
+        _tvIssueNumber.text = "# ${comic.id}"
     }
 }

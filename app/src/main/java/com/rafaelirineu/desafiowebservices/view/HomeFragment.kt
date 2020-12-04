@@ -1,5 +1,6 @@
 package com.rafaelirineu.desafiowebservices.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +12,6 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rafaelirineu.desafiowebservices.R
-import com.rafaelirineu.desafiowebservices.model.ComicDataModel
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 import com.rafaelirineu.desafiowebservices.repository.ComicRepository
 import com.rafaelirineu.desafiowebservices.viewmodel.ComicViewModel
@@ -19,7 +19,6 @@ import com.rafaelirineu.desafiowebservices.viewmodel.ComicViewModel
 class HomeFragment : Fragment() {
 
     private lateinit var _viewModel: ComicViewModel
-    private lateinit var _view: View
     private lateinit var _listaAdapter: ComicAdapter
     private var _listaComic = mutableListOf<ComicModel>()
 
@@ -33,39 +32,34 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _view = view
-
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         val manager = GridLayoutManager(view.context, 3)
+        val navControl = Navigation.findNavController(view)
 
+        _listaComic = mutableListOf()
         _listaAdapter = ComicAdapter(_listaComic) {
 
-            val bundle = bundleOf("id" to it.id)
-            val navControl = Navigation.findNavController(view)
+            val bundle = bundleOf(ID_KEY to it.id)
             navControl.navigate(R.id.action_homeFragment_to_comicInfoFragment, bundle)
         }
 
-        recyclerView.apply {
+        recyclerView.apply{
             setHasFixedSize(true)
-            adapter = _listaAdapter
             layoutManager = manager
+            adapter = _listaAdapter
         }
 
         _viewModel = ViewModelProvider(
             this, ComicViewModel.ComicViewModelFactory(ComicRepository())
         ).get(ComicViewModel::class.java)
 
-        _viewModel.obterComic().observe(viewLifecycleOwner, {
-            mostrarResultados(it)
+        _viewModel.obterTodasComics().observe(viewLifecycleOwner,{
+            it.let{_listaComic.addAll(it)}
+            _listaAdapter.notifyDataSetChanged()
         })
     }
 
-    private fun mostrarResultados(lista: List<ComicModel>) {
-        if (_listaComic.isEmpty()) {
-            lista.let { _listaComic.addAll(lista) }
-            _listaAdapter.notifyDataSetChanged()
-        }
+    companion object {
+        const val ID_KEY = "ID"
     }
 }
-
-

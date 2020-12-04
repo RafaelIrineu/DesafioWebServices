@@ -39,11 +39,11 @@ class RegisterFragment : Fragment() {
 
     private fun validaCamposRegister(view: View): Boolean {
 
-        var nameRegister =
+        val nameRegister =
             view.findViewById<TextInputEditText>(R.id.txtInputName_fragmentRegister)
-        var emailRegister =
+        val emailRegister =
             view.findViewById<TextInputEditText>(R.id.txtInputEmail_fragmentRegister)
-        var passwordRegister =
+        val passwordRegister =
             view.findViewById<TextInputEditText>(R.id.txtInputPassword_fragmentRegister)
 
         var resultado = true

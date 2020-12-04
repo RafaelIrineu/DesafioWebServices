@@ -38,9 +38,9 @@ class LoginFragment : Fragment() {
 
     private fun validaCamposLogin(view: View): Boolean {
 
-        var emailLogin =
+        val emailLogin =
             view.findViewById<TextInputEditText>(R.id.txtInputEmail_fragmentLogin)
-        var passwordLogin =
+        val passwordLogin =
             view.findViewById<TextInputEditText>(R.id.txtInputPassword_fragmentLogin)
 
         var resultado = true

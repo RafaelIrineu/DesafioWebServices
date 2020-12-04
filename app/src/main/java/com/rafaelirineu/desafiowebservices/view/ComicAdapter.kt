@@ -7,7 +7,7 @@ import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 
 class ComicAdapter(
-    private val dataSet: MutableList<ComicModel>, private var listener:
+    private val _dataSet: MutableList<ComicModel>, private var _listener:
         (ComicModel) -> Unit) : RecyclerView.Adapter<ComicViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicViewHolder {
@@ -17,10 +17,10 @@ class ComicAdapter(
     }
 
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
-        val item = dataSet[position]
+        val item = _dataSet[position]
         holder.bind(item)
-        holder.itemView.setOnClickListener { listener(item) }
+        holder.itemView.setOnClickListener { _listener(item) }
     }
 
-    override fun getItemCount() = dataSet.size
+    override fun getItemCount() = _dataSet.size
 }

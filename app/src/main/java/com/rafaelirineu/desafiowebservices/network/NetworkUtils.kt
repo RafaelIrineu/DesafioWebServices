@@ -9,11 +9,11 @@ const val PRIVATE_KEY = "27c1e431978243f0151690d53f0e430f38fb7beb"
 class NetworkUtils {
 
     companion object {
-        fun getRetrofitInstance (): Retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+        private const val BASE_URL = "https://gateway.marvel.com"
+
+        fun getRetrofitInstance(baseUrl: String = BASE_URL): Retrofit = Retrofit.Builder()
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
-        private const val BASE_URL = "https://gateway.marvel.com"
     }
 }

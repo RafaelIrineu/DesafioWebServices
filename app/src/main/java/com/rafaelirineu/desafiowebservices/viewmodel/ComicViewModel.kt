@@ -6,39 +6,30 @@ import androidx.lifecycle.liveData
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 import com.rafaelirineu.desafiowebservices.repository.ComicRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Dispatchers.IO
-import okhttp3.Dispatcher
 
-class ComicViewModel(private val repository: ComicRepository) : ViewModel() {
+class ComicViewModel(private val _repository: ComicRepository) : ViewModel() {
 
-    private var _comics: List<ComicModel> = listOf()
-    private lateinit var uniqueComic: ComicModel
+    private var _listaComics: List<ComicModel> = listOf()
+    private lateinit var _comic: ComicModel
 
-    fun obterComic() = liveData(Dispatchers.IO) {
+    fun obterTodasComics() = liveData(Dispatchers.IO) {
         try {
-            val response = repository.obterComic()
-            _comics = response.data.results
-            emit(_comics)
+            val response = _repository.obterTodasComics().data.results
+            _listaComics = response
+            emit(response)
         } catch (e: Exception) {
             println("Ocorreu um erro : ${e.message} ")
         }
     }
 
-    fun getUniqueComic(id: Int) = liveData(Dispatchers.IO) {
-
-        try {
-            val response = repository.getUniqueComic(id)
-            uniqueComic = response.data.results[0]
-            emit(uniqueComic)
-
-        } catch (e: Exception) {
-            println("Ocorreu um erro : ${e.message}")
-        }
+    fun obterUmaComic(id: Int) = liveData(Dispatchers.IO) {
+        val response = _repository.obterUmaComic(id).data.results[0]
+        _comic = response
+        emit(response)
     }
 
     class ComicViewModelFactory(
-        private val repository: ComicRepository
-    ) : ViewModelProvider.Factory {
+        private val repository: ComicRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             return ComicViewModel(repository) as T
         }

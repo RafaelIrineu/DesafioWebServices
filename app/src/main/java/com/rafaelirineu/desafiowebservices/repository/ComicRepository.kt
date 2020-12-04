@@ -5,10 +5,9 @@ import com.rafaelirineu.desafiowebservices.network.getHash
 import com.rafaelirineu.desafiowebservices.network.getTimeStamp
 
 class ComicRepository {
+    private val _client = ComicEndpoint.Endpoint
 
-    private val client = ComicEndpoint.Endpoint
-
-    suspend fun obterComic() = client.obterComic(
+    suspend fun obterTodasComics() = _client.obterTodasComics(
         "comic",
         "comic",
         true,
@@ -17,8 +16,9 @@ class ComicRepository {
         PUBLIC_KEY
     )
 
-    suspend fun getUniqueComic(id: Int) = client.getUniqueComic(
-        id, "comic",
+    suspend fun obterUmaComic(id: Int) = _client.obterUmaComic(
+        id,
+        "comic",
         "comic",
         true,
         getTimeStamp(),

@@ -12,8 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
-import com.rafaelirineu.desafiowebservices.repository.ComicRepository
-
+import com.rafaelirineu.desafiowebservices.data.repository.ComicRepository
 import com.rafaelirineu.desafiowebservices.viewmodel.ComicViewModel
 
 class HomeFragment : Fragment() {

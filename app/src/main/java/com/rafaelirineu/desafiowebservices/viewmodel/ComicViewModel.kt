@@ -3,8 +3,8 @@ package com.rafaelirineu.desafiowebservices.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.liveData
+import com.rafaelirineu.desafiowebservices.data.repository.ComicRepository
 import com.rafaelirineu.desafiowebservices.model.ComicModel
-import com.rafaelirineu.desafiowebservices.repository.ComicRepository
 import kotlinx.coroutines.Dispatchers
 
 class ComicViewModel(private val _repository: ComicRepository) : ViewModel() {

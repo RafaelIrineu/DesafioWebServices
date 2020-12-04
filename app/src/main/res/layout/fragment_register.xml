@@ -15,7 +15,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_fragmentRegister"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -36,7 +35,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/txtRegister_registerFragment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
@@ -82,13 +80,11 @@
             app:layout_constraintTop_toTopOf="@+id/constraintLayout_fragmentLogin" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_fragmentLogin"
             android:layout_width="311dp"
             android:layout_height="match_parent"
             android:layout_marginTop="60dp"
             android:background="@color/colorWhite"
             app:cardCornerRadius="25dp"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout_fragmentLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtFake_fragmentRegister">
@@ -183,7 +179,6 @@
         app:layout_constraintTop_toBottomOf="@+id/appBar_fragmentRegister" />
 
     <ImageView
-        android:id="@+id/imgUser_fragmentRegister"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="45dp"

@@ -9,7 +9,6 @@
     tools:context=".view.comic.HomeFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/appBar_fragmentHome"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorBackgroundSecondary"
@@ -18,7 +17,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imgAppBar_fragmentHome"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="15dp"

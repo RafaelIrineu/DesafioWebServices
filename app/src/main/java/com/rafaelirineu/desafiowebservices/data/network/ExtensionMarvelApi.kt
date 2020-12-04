@@ -37,6 +37,6 @@ fun getTimeStamp(): String {
     return ts.toString()
 }
 
-fun getHash(): String? {
+fun getHash(): String {
     return ExtensionMarvelApi.md5(getTimeStamp() + PRIVATE_KEY + PUBLIC_KEY)
 }

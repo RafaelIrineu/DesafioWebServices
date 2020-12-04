@@ -1,6 +1,5 @@
-package com.rafaelirineu.desafiowebservices.repository
+package com.rafaelirineu.desafiowebservices.data.repository
 
-import com.rafaelirineu.desafiowebservices.data.repository.ComicEndpoint
 import com.rafaelirineu.desafiowebservices.data.network.PUBLIC_KEY
 import com.rafaelirineu.desafiowebservices.data.network.getHash
 import com.rafaelirineu.desafiowebservices.data.network.getTimeStamp

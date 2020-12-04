@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
-import com.rafaelirineu.desafiowebservices.repository.ComicRepository
+import com.rafaelirineu.desafiowebservices.data.repository.ComicRepository
 import com.rafaelirineu.desafiowebservices.view.comic.HomeFragment.Companion.ID_KEY
 
 import com.rafaelirineu.desafiowebservices.viewmodel.ComicViewModel
@@ -61,8 +61,8 @@ class ComicInfoFragment : Fragment() {
                 val pages = view.findViewById<TextView>(R.id.txtPages_fragmentComicInfo)
                 val price = view.findViewById<TextView>(R.id.txtPrice_fragmentComicInfo)
 
-                title.text = newTitle.toString()
-                summary.text = newSummary.toString()
+                title.text = newTitle
+                summary.text = newSummary
                 published.text = newPublished.toString()
                 pages.text = newPage.toString()
                 price.text = newPrice.toString()

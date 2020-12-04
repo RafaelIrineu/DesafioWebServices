@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.network
+package com.rafaelirineu.desafiowebservices.data.network
 
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException

@@ -1,8 +1,9 @@
 package com.rafaelirineu.desafiowebservices.repository
 
-import com.rafaelirineu.desafiowebservices.network.PUBLIC_KEY
-import com.rafaelirineu.desafiowebservices.network.getHash
-import com.rafaelirineu.desafiowebservices.network.getTimeStamp
+import com.rafaelirineu.desafiowebservices.data.repository.ComicEndpoint
+import com.rafaelirineu.desafiowebservices.data.network.PUBLIC_KEY
+import com.rafaelirineu.desafiowebservices.data.network.getHash
+import com.rafaelirineu.desafiowebservices.data.network.getTimeStamp
 
 class ComicRepository {
     private val _client = ComicEndpoint.Endpoint

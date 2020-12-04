@@ -1,7 +1,7 @@
-package com.rafaelirineu.desafiowebservices.repository
+package com.rafaelirineu.desafiowebservices.data.repository
 
 import com.rafaelirineu.desafiowebservices.model.ComicDataWrapper
-import com.rafaelirineu.desafiowebservices.network.NetworkUtils
+import com.rafaelirineu.desafiowebservices.data.network.NetworkUtils
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

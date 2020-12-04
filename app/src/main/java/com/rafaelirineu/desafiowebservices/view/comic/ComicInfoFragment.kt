@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.view
+package com.rafaelirineu.desafiowebservices.view.comic
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,8 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
-import com.rafaelirineu.desafiowebservices.view.HomeFragment.Companion.ID_KEY
 import com.rafaelirineu.desafiowebservices.repository.ComicRepository
+import com.rafaelirineu.desafiowebservices.view.comic.HomeFragment.Companion.ID_KEY
+
 import com.rafaelirineu.desafiowebservices.viewmodel.ComicViewModel
 import com.squareup.picasso.Picasso
 
@@ -77,6 +78,10 @@ class ComicInfoFragment : Fragment() {
 
         view.findViewById<ImageView>(R.id.imgBack_fragmentComicInfo).setOnClickListener {
             navController.navigate(R.id.action_comicInfoFragment_to_homeFragment)
+        }
+
+        view.findViewById<ImageView>(R.id.imgThumb_fragmentItemComic).setOnClickListener {
+            navController.navigate(R.id.action_comicInfoFragment_to_comicCoverFragment)
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.view
+package com.rafaelirineu.desafiowebservices.view.comic
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

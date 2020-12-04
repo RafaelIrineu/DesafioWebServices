@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.view
+package com.rafaelirineu.desafiowebservices.view.comic
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,6 +1,5 @@
-package com.rafaelirineu.desafiowebservices.view
+package com.rafaelirineu.desafiowebservices.view.comic
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rafaelirineu.desafiowebservices.R
 import com.rafaelirineu.desafiowebservices.model.ComicModel
 import com.rafaelirineu.desafiowebservices.repository.ComicRepository
+
 import com.rafaelirineu.desafiowebservices.viewmodel.ComicViewModel
 
 class HomeFragment : Fragment() {

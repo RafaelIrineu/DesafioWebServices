@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.network
+package com.rafaelirineu.desafiowebservices.data.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

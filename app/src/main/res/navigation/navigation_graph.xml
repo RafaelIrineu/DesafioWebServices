@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.rafaelirineu.desafiowebservices.view.HomeFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.comic.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/comicInfoFragment"
-        android:name="com.rafaelirineu.desafiowebservices.view.ComicInfoFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.comic.ComicInfoFragment"
         android:label="fragment_comic_info"
         tools:layout="@layout/fragment_comic_info" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/comicCoverFragment"
-        android:name="com.rafaelirineu.desafiowebservices.view.ComicCoverFragment"
+        android:name="com.rafaelirineu.desafiowebservices.view.comic.ComicCoverFragment"
         android:label="fragment_comic_cover"
         tools:layout="@layout/fragment_comic_cover" >
         <action

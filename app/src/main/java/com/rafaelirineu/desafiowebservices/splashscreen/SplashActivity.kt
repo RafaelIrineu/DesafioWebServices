@@ -1,4 +1,4 @@
-package com.rafaelirineu.desafiowebservices.view
+package com.rafaelirineu.desafiowebservices.splashscreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

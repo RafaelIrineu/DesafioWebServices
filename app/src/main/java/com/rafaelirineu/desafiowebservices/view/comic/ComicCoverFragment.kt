@@ -1,30 +1,39 @@
 package com.rafaelirineu.desafiowebservices.view.comic
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.ImageView
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.rafaelirineu.desafiowebservices.R
+import com.squareup.picasso.Picasso
 
 class ComicCoverFragment : Fragment() {
 
+    private lateinit var _view: View
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_comic_cover, container, false)
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View {
+        _view = inflater.inflate(R.layout.fragment_comic_cover, container, false)
+
+        val image = _view.findViewById<ImageView>(R.id.imageViewFull)
+        val coverThumbnail = arguments?.getString(ComicInfoFragment.COMIC_IMAGE)
+        Picasso.get().load(coverThumbnail).into(image)
+        onCloseDialog(_view)
+
+        return _view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val navController = Navigation.findNavController(view)
-
+    private fun onCloseDialog(view: View) {
         view.findViewById<ImageView>(R.id.imgClose_fragmentComicCover).setOnClickListener {
-            navController.navigate(R.id.action_comicCoverFragment_to_comicInfoFragment)
+            findNavController().navigateUp()
         }
     }
 }

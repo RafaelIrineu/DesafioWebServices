@@ -84,4 +84,7 @@ class ComicInfoFragment : Fragment() {
             navController.navigate(R.id.action_comicInfoFragment_to_comicCoverFragment)
         }
     }
+    companion object {
+        const val COMIC_IMAGE = "COMIC_IMAGE"
+    }
 }
